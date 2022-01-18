@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-product-read',
   templateUrl: './product-read.component.html',
-  styleUrls: ['./product-read.component.css']
+  styleUrls: ['./product-read.component.css'] 
 })
 export class ProductReadComponent implements OnInit {
 
-  products!:Product[];
+  products!:Product[]
+  displayedColumns = ['id', 'name', 'price']
+
   constructor(private productservice: ProductService) { }
 
   ngOnInit(): void {
